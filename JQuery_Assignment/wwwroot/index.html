@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/CSS/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="Content/JS/jquery/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        #div-2, #div-6 {
+            background-color: black;
+            height: 100px;
+            width: 230px;
+        }
+
+        #p_ex2, #p_ex3 {
+            font-weight: bold;
+            color: white;
+        }
+
+        #h4_ex5 {
+            display: none;
+            border:groove 2px green;
+        }
+
+        .font_hundred {
+            font-size: 100%;
+        }
+
+        .font_twohundred {
+            font-size: 200%;
+        }
+
+        #p_ex7 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .run {
+            position: relative;
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            background-color: mediumaquamarine;
+        }
+
+        #div-7 {
+            border: groove;
+            border-width: 1px;
+        }
+
+        #list, #select {
+            background-color: black;
+            list-style-type: none;
+            height: 35px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            vertical-align: central;
+        }
+
+        #list_item {
+            display: inline;
+            padding-right: 10px;
+            padding-bottom: 21px;
+            padding-top: 6px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-right: groove;
+        }
+
+        #div-menu {
+            display: none;
+            padding: 50px;
+        }
+
+        #div-slide {
+            background-color: black;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            border: solid 2px grey;
+            text-align: center;
+        }
+
+        #div-menu {
+            background-color: grey;
+            color: white;
+            padding: 10px 0px 20px 0px;
+        }
+
+        #select {
+            border: none;
+        }
+    </style>
+
+    <hr />
+    <h1 style="text-align:center"> JQuery Assignment</h1>
+    <hr />
+
+    <!-- Execrcise - 1 Html Code -->
+    <h3>Exercise - 1 [Change Listner] </h3>
+    <div id="div-1" width="100px" height="100px">
+        &nbsp;<p style="font-size:15px; font-weight:bold" id="p_ex1"></p>
+    </div>
+    <input id="txt_ex1" type="text" />
+    <hr />
+
+    <!-- Execrcise - 2 Html Code -->
+    <h3>Exercise - 2 [Show/Hide] </h3>
+    &nbsp;<div id="div-2">
+        <p id="p_ex2"> This hides itself when clicked</p>
+    </div>
+    <br />
+    &nbsp;<button class="btn btn-outline-secondary" id="btn_ex2_1">Click here to show the blackbox</button>
+    &nbsp;<button class="btn btn-outline-secondary" id="btn_ex2_2">Toggle [ Hide/ Show] </button>
+    <hr />
+
+    <!-- Execrcise - 3 Html Code -->
+    <h3>Exercise - 3 [Show/Hide] </h3>
+    &nbsp; <p id="p_ex3" style="color:black;font-size:100%"> This is a paragraph text for exercise - 3</p>
+    <br />
+    &nbsp;<button class="btn btn-outline-secondary" id="btn_ex3_1">Add style</button>
+    &nbsp;<button class="btn btn-outline-secondary" id="btn_ex3_2">Remove Style </button>
+    &nbsp;<button class="btn btn-outline-secondary" id="btn_ex3_3">Toggle the styles </button>
+    <hr />
+
+    <!-- Execrcise - 4 Html Code -->
+    <h3>Exercise - 4 [Key Press Listener]</h3>
+    <span id="s_ex4"></span><br />
+    &nbsp;<label>input box : &nbsp;</label>
+    <input id="txt_ex4" type="text" />
+    <hr />
+
+    <!-- Execrcise - 5 Html Code -->
+    <h3>Exercise - 5 [Focus Events]</h3>
+    &nbsp;<input type="text" class="btn btn-outline-secondary" id="txt_ex5_1" />
+    <h4 id="h4_ex5">changes trigger while button lose/gain focus</h4>
+
+    <hr />
+
+    <!-- Execrcise - 6 Html Code -->
+    <h3> Exercise -  6 [Fading]</h3>
+    <div id="div-6"></div>
+    <br />
+    &nbsp;<button class="btn btn-outline-secondary" id="btn_ex6_1">Fade In/Out</button>
+    &nbsp;<button class="btn btn-outline-secondary" id="btn_ex6_2">To Trigger the Event</button>
+    <hr />
+
+    <!-- Execrcise - 7 Html Code -->
+    <h3> Exercise -  7 [Animation-Fading]</h3>
+    <p id="p_ex7">This is a Paragraph for Exercise-7</p>
+    &nbsp;&nbsp;
+    <div id="div-7">animation happens here</div>
+    <br />
+    <div class="run"></div>
+    <div class="run"></div>
+    <div class="run"></div>
+    <div class="run"></div>
+    <div class="run"></div>
+    <br /><br /><br />
+    &nbsp;<button class="btn btn-outline-secondary" id="btn_ex7_1">Animate</button>
+    &nbsp;<button class="btn btn-outline-secondary" id="btn_ex7_2">To Run</button>
+    &nbsp;<button class="btn btn-outline-secondary" id="btn_ex7_3">Reset</button>
+    <hr />
+
+    <!-- Execrcise - 8 Html Code -->
+    <h3> Exercise -  8 [Animation-Movement]</h3>
+    <div id="div-slide">click to slide-down the menu</div>
+    <div id="div-menu">
+        <h2> JQuery - Slide</h2>
+        <div style="border:solid white 1px; background-color:black">
+            <ul id="list">
+                <li id="list_item">Home</li>
+                <li id="list_item">First Page</li>
+                <li id="list_item">Second Page</li>
+                <li id="list_item">Third Page</li>
+                <li id="list_item">
+                    <select name="drop_menu" id="select">
+                        <option value="">Dropdown Menu</option>
+                        <option value="">Link 1</option>
+                        <option value="">Link 2</option>
+                        <option value="">Link 3</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- script goes here -->
+    <script>
+        $(document).ready(function () {
+
+            // Exercise - 1 codes
+            var key_presses = document.querySelector("#txt_ex1");
+            key_presses.addEventListener("keypress", create);
+            function create(e) {
+                var str = document.getElementById("txt_ex1").value;
+                $("#p_ex1").append(str);
+            }
+
+            // Exercise - 2 codes
+            $("#div-2").click(function () {
+                $(this).hide(5000);
+            });
+
+            $("#btn_ex2_1").click(function () {
+                $("#div-2").show(3000);
+            });
+            $("#btn_ex2_2").click(function () {
+                $("#div-2").toggle();
+            });
+
+            // Exercise - 3 codes
+            $("#btn_ex3_1").click(function () {
+                $("#p_ex3").css("font-size", "200%");
+            });
+
+            $("#btn_ex3_2").click(function () {
+                $("#p_ex3").css("font-size", "100%");
+            });
+            $("#btn_ex3_3").click(function () {
+                var F = $("#p_ex3").css("font-size");
+                if (F == '16px')
+                    $("#p_ex3").css("font-size", "200%");
+                else
+                    $("#p_ex3").css("font-size", "100%");
+            });
+
+            // Exercise - 4 codes
+            var key_presses = document.querySelector("#txt_ex4");
+            key_presses.addEventListener("keypress", display);
+            function display(e) {
+                document.querySelector("#s_ex4").textContent += ` ${e.code}`;
+            }
+
+            // Exercise - 5 codes
+            $("#txt_ex5_1").on("focus", function () {
+                $(this).next("#h4_ex5").css(
+                    {
+                        'display' : 'inline',
+                        'color': 'red',
+                        'borderWidth' : '2px'
+                    }).fadeOut(1000);
+            });
+
+            // Exercise - 6 codes
+            // Fade out and fade in on button click
+            $("#btn_ex6_1").on("click", function () {
+                $("#div-6").fadeToggle(3000);
+            });
+            // code to trigger the button click event
+            $("#btn_ex6_2").on("click", function () {
+                $("#btn_ex6_1").trigger("click");
+            });
+
+            // Exercise - 7 Codes
+            //$(selector).on("mouseenter", handlerIn).on
+            //("mouseleave", handlerOut);
+            // $(selector).hover(handlerIn, handlerOut)
+
+            $("#p_ex7").hover(function () {
+                $("#p_ex7").fadeOut(2000);
+            }, function () {
+                $("#p_ex7").fadeIn(2000);
+            });
+            $("#btn_ex7_1").on("click", function () {
+                $("#div-7").animate({ fontSize: "26px" }, 1500)
+                    .animate({ width: "50%" }, 1000)
+                    .animate({ borderWidth: "5px" }, 1000)
+            });
+            $("#btn_ex7_2").on("click", function () {
+                $(".run").first().animate({ left: 100 },
+                    {
+                        duration: 1000,
+                        step: function (now, fx) {
+                            $(".run").slice(1).css("left", now);
+                        }
+                    });
+            });
+            $("#btn_ex7_3").click(function () {
+                $("#div-7").css({
+                    fontSize: "",
+                    width: "",
+                    borderWidth: ""
+                });
+                $(".run").css({
+                    left: 0
+                });
+            });
+
+            // Exercise - 8 Codes
+
+            $("#div-slide").on("click", function () {
+                $("#div-menu").slideDown(3000);
+                $("#list").slideDown(3000);
+            });
+
+            $("#div-slide").mouseleave(function () {
+                $("#list").slideUp(3000);
+            });
+        });
+    </script>
+</body>
+</html >
